@@ -59,12 +59,12 @@ class SimpleView implements View {
         // work around limitation of ruby target
         return untyped __rb__("h.respond_to? :keys");
 #else
-        return Std.is(h,haxe.ds.StringMap);
+        return Std.isOfType(h,haxe.ds.StringMap);
 #end
     }
 
     public function isTable(t : Dynamic) : Bool {
-        return Std.is(t,Table);
+        return Std.isOfType(t,Table);
     }
 
     public function getTable(t : Dynamic) : Table {
