@@ -252,7 +252,7 @@ class Coopy {
                 case "psv":
                     format_preference = "csv";
 #if js
-                    delim_preference = untyped __js__('String.fromCharCode(0xD83D, 0xDCA9)');
+                    delim_preference = untyped js.Syntax.code('String.fromCharCode(0xD83D, 0xDCA9)');
 #else
                     delim_preference = String.fromCharCode(0x1F4A9);
 #end
@@ -1230,7 +1230,7 @@ class Coopy {
 
         // emergency! try to find and use native wrapper
 #if js
-        return untyped __js__("new daff.TableView(data)");
+        return untyped js.Syntax.code("new daff.TableView(data)");
 #elseif python
         python.Syntax.code("daff = __import__('daff')");
         return python.Syntax.code("daff.PythonTableView(data)");
