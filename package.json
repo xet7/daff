@@ -26,7 +26,7 @@
   },
   "optionalDependencies": {
     "fibers": "^5.0.0",
-    "sqlite3": "^4.0.0"
+    "sqlite3": "^5.1.7"
   },
   "scripts": {
     "prepare": "make js",
